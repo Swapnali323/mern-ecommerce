@@ -15,6 +15,7 @@ import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import Admin from './components/Admin';
+import "./components/FontAwesome";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -32,10 +33,10 @@ function App() {
         <header className="header">
           <div className="brand">
             {/* <button onClick={openMenu}>&#9776;</button> */}
-            <Link to="/">Shopdeal</Link>
+            <Link to="/">Shopdeal 👚</Link>
           </div>
           <div className="header-links">
-            <a href="/cart">Cart</a>
+            <a href="/cart"> Cart</a>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : (

@@ -119,7 +119,7 @@ function OrderScreen(props) {
                   amount={order.totalPrice}
                   onSuccess={handleSuccessPayment} />
               } */}
-              <h1>THANK YOU FOR ORDERING</h1>
+              <h1>THANK YOU FOR ORDERING 😄</h1>
             </li>
             <li>
               <h3>Order Summary</h3>

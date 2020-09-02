@@ -6,6 +6,8 @@ import {
   listProducts,
   deleteProdcut,
 } from '../actions/productActions';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { Alert } from 'react-bootstrap';
 
 function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -99,16 +101,21 @@ function ProductsScreen(props) {
     <div className="content content-margined">
       <div className="product-header">
         <h3>Products</h3>
-        <button className="button primary" onClick={() => openModal({})}>
-          Create Product
-        </button>
+        <div  className="button-icon">
+        <span className="text-icon"><FontAwesomeIcon icon="plus" className="faicon-plus" onClick={() => openModal({})}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        </div>
+        {/* <button className="button primary" onClick={() => openModal({})}> */}
+       
+          
+        {/* </button> */}
       </div>
       {modalVisible && (
         <div className="form">
           <form onSubmit={submitHandler}>
             <ul className="form-container">
-              <li>
-                <h2>Create Product</h2>
+            <li>
+                <h2 className="text-center">Create Product</h2>
               </li>
               <li>
                 {loadingSave && <div>Loading...</div>}
@@ -126,7 +133,7 @@ function ProductsScreen(props) {
                 ></input>
               </li>
               <li>
-                <label htmlFor="price">Price</label>
+                <label htmlFor="price" >Price</label>
                 <input
                   type="text"
                   name="price"
@@ -203,6 +210,7 @@ function ProductsScreen(props) {
             </ul>
           </form>
         </div>
+       
       )}
 
       <div className="product-list">
@@ -226,15 +234,19 @@ function ProductsScreen(props) {
                 <td>{product.category}</td>
                 <td>{product.brand}</td>
                 <td>
-                  <button className="button" onClick={() => openModal(product)}>
-                    Edit
-                  </button>{' '}
-                  <button
+                <span>
+                  {/* <button className="button" onClick={() => openModal(product)}> */}
+                  <FontAwesomeIcon icon="edit" className="faicon-edit" onClick={() => openModal(product)}/></span>
+                
+                  {/* </button> */}
+                  {' '}
+                  {/* <button
                     className="button"
                     onClick={() => deleteHandler(product)}
                   >
                     Delete
-                  </button>
+                  </button> */}
+                  <span><FontAwesomeIcon icon="trash" className="faicon-delete" onClick={() =>  deleteHandler(product)}/></span>
                 </td>
               </tr>
             ))}

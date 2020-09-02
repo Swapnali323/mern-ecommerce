@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font: 1.6rem Helvetica;
+  font: 1.7rem normal;
   height: 100vh;
   margin: 0;
   background-color:lemonchiffon;
@@ -16,6 +16,42 @@ button {
 }
 #root {
   height: 100%;
+}
+.faicon-edit{
+  margin:0 5px;
+  font-size: 20px;
+  color: blue;
+}
+.faicon-delete{
+  margin:0 5px;
+  font-size: 20px;
+  color: red;
+}
+.faicon-plus{
+  background-color:blue;
+  width:400px;
+  color:white;
+  margin-top:40px;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-right: 20px;
+}
+/* .cart-plus{
+  height: 50px;
+} */
+/* .button-icon{
+  background-color: rgb(138, 14, 150);
+  width:300px;
+  color:white;
+  border-radius: 30px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  margin-top: 20px;
+  text-justify: center;
+  align-items: center;
+} */
+.text-icon{
+margin-top: 1px;
 }
 .grid-container {
   display: grid;
@@ -43,14 +79,17 @@ button {
   font-weight: bold;
   text-decoration: none;
   margin-left: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .header-links a {
   color: #ffffff;
   text-decoration: none;
   padding: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
 }
 .header-links a:hover {
-  color: lemonchiffon;
+  color: black;
 }
 .main {
   grid-area: main;
@@ -330,6 +369,8 @@ a > .rating > span:last-child {
   align-items: center;
   height: 100%;
   margin-top: 40px;
+  /* filter: drop-shadow(0 0 0.75rem grey); */
+  
 }
 .form-container {
   display: flex;
@@ -339,6 +380,8 @@ a > .rating > span:last-child {
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
   list-style-type: none;
+  box-shadow: 0 0  1rem  grey;
+ background-color: #f2f2f2;
 }
 .form-container li {
   display: flex;
@@ -409,6 +452,9 @@ margin-right: 0;
 th {
   text-align: left;
   
+}
+td{
+  height: 40px;
 }
 tbody > tr:nth-child(odd) {
   background-color: #f0f0f0;
